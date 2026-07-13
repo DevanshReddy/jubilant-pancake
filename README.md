@@ -1,6 +1,6 @@
 # Ultrasonic Radar with Joystick Override
 
-A little Arduino project that turns an HC-SR04 + servo into a radar scanner. It sweeps back and forth on its own, but if you hold the joystick button it switches to manual mode so you can aim it yourself. If something gets too close, the buzzer and LED kick in.
+A little Arduino project that turns an HC-SR04 + servo into a radar scanner. It sweeps back and forth on its own, but if you hold the joystick button it switches to manual mode so you can aim it yourself. If something gets too close, the LED kicks in.
 
 Started this as a "let's see if we can build something that actually looks cool on a breadboard" project. Turned out pretty fun.
 
@@ -9,7 +9,7 @@ Started this as a "let's see if we can build something that actually looks cool 
 - Servo sweeps the ultrasonic sensor from 0° to 180° and back, like a little radar dish
 - Click the joystick button to flip between **auto-sweep** and **manual (joystick) mode**
 - In joystick mode, push the stick left/right to steer the servo — speed scales with how far you push it, not just on/off
-- If it detects something closer than 20cm, LED turns on and buzzer sounds until the object clears
+- If it detects something closer than 20cm, LED turns on until the object clears
 - Angle + distance readings get printed over Serial (9600 baud) so you can hook it up to a processing/plotting sketch if you want the classic sweeping radar-screen visual
 
 ## Hardware
@@ -52,3 +52,14 @@ Joystick button is wired with `INPUT_PULLUP`, so it just needs to go to GND when
 ## License
 
 Do whatever you want with this, it's just a hobby sketch.
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/03b14aad-6b98-4726-bbc8-8e5d306a1284" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/1c729496-ea13-4bd4-bd2f-aa6cb7deb74a" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/b3b6831c-84c5-449b-a238-053749e09089" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/a965e64f-878c-4d3b-a62f-8a81abcf57f5" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/54b401ed-be12-42f6-8a31-b6e68a1e1cb3" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/6058a23e-00ed-4e9d-8f74-8009b23241dc" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/def92c7d-7947-4624-b1a7-9294a26a30fc" />
+
+
+https://github.com/user-attachments/assets/446aee7b-6975-445f-88c4-1dae998f8a5b
+
