@@ -25,13 +25,22 @@ Started this as a "let's see if we can build something that actually looks cool 
 
 | Component        | Arduino Pin |
 |-------------------|:-----------:|
-| Servo signal       | D9  |
+| Arduino GND         |-Rail|
+| Arduino 5V          |+Rail|
+| Servo signal        | D9  |
+| Servo GND           |-Rail|
 | HC-SR04 TRIG        | D6  |
 | HC-SR04 ECHO        | D7  |
-| Buzzer              | D5  |
-| LED                 | D4  |
+| HC-SR04 GND         |-Rail|
+| HC-SR04 VCC         |+Rail|
+| Buzzer +            | D5  |
+| Buzzer -            |-Rail|
+| LED Cathod          | D4  |
+|LED Anode->resistor->|-Rail|
 | Joystick button (SW)| D2  |
 | Joystick X axis     | A0  |
+| Joystick GND        |-Rail|
+| Joystick +5V        |+Rail|
 
 Joystick button is wired with `INPUT_PULLUP`, so it just needs to go to GND when pressed — no external resistor needed.
 
