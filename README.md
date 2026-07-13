@@ -22,6 +22,8 @@ Started this as a "let's see if we can build something that actually looks cool 
 - Joystick module (just using the button + X axis here, Y axis isn't used)
 
 ## Wiring
+This is the full wiring list
+This is with a breadbard, because a arduino dosen't have enough GND and 5V ports
 
 | Component        | Arduino Pin |
 |-------------------|:-----------:|
@@ -51,16 +53,28 @@ Joystick button is wired with `INPUT_PULLUP`, so it just needs to go to GND when
 - Joystick deadzone is set to 60 around center (512) — my joystick module drifts a little when idle, so this stops it from crawling on its own. Might need to tweak this depending on your specific module.
 - The `tone()` call in `alarmOn()` uses a 5 second duration just so it doesn't need to be re-triggered every loop — it naturally gets silenced by `alarmOff()` once the object clears anyway.
 - Sweep step is 5° per loop with a 30ms delay — feels about right for a smooth-looking sweep without the servo sounding like it's struggling. Bigger steps make it twitchy.
+- If you want to potentialy add more sensors or modules to this project of mine, try to buy the arduino r3 mega on amazzon, it comes with extra modules and has way more digital pins than a arduino uno/nano.
+- I wrote down a comment, so if someone uses the code, it should show were you can adjust/change the detecting distance
 
 ## Ideas for later
 
 - Add a second mode where it locks onto the closest object instead of just alarming
 - Try feeding the Serial output into a Processing sketch for the classic green radar-screen look
 - Maybe average a few distance readings to smooth out noisy pings
+- make a human only detection system
+
+## Issues
+
+If you are having problems look at this list:
+- If your adruino isn't turning on, check if you messed up the GND and/or 5V connections, this normally overheates the arduino and makes it stop working
+- If you downloaded the code, but don't want to connect it to your device, first verify the code and then upload, then finally use a barreljack(should be provided) to make it work without USB cable, a 9V battery won't work.
+- Comment any other problems you have.
 
 ## License
 
 Do whatever you want with this, it's just a hobby sketch.
+
+## Pictures and a Video
 <img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/03b14aad-6b98-4726-bbc8-8e5d306a1284" />
 <img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/1c729496-ea13-4bd4-bd2f-aa6cb7deb74a" />
 <img width="1600" height="1200" alt="WhatsApp Image 2026-07-13 at 2 22 45 PM" src="https://github.com/user-attachments/assets/b3b6831c-84c5-449b-a238-053749e09089" />
